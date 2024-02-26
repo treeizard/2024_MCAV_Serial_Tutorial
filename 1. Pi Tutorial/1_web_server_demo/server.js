@@ -1,0 +1,22 @@
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+	res.send(`
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Hello World</title>
+	</head>
+	<body>
+
+		<h1>Hello, World!</h1>
+
+	</body>
+	</html>
+	`);
+});
+
+app.listen(5000, () => console.log('http://localhost:5000/'));
