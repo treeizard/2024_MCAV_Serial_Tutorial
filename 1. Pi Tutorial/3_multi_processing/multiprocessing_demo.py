@@ -4,8 +4,7 @@ from multiprocessing import Process
 def print_func(continent='Asia'):
     print('The name of continent is : ', continent)
 
-if __name__ == "__main__":  # confirms that the code is under main function
-    names = ['America', 'Europe', 'Africa']
+def mp_demo(names):
     procs = []
     proc = Process(target=print_func)  # instantiating without any argument
     procs.append(proc)
@@ -21,3 +20,9 @@ if __name__ == "__main__":  # confirms that the code is under main function
     # complete the processes
     for proc in procs:
         proc.join()
+
+
+if __name__ == "__main__":  # confirms that the code is under main function
+    names = ['America', 'Europe', 'Africa']
+    mp_demo(names)
+    
